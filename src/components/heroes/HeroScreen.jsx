@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { Redirect, useParams } from 'react-router-dom'
 import { getHeroesById } from '../../selectors/getHeroesById';
 
@@ -6,8 +6,8 @@ import { getHeroesById } from '../../selectors/getHeroesById';
 export const HeroScreen = ({history}) => {
     // const params = useParams();
     const {heroeId} = useParams();
-
-    const hero = getHeroesById(heroeId);
+    // const hero = getHeroesById(heroeId);
+    const hero = useMemo(() => getHeroesById(heroeId) , [heroeId]);
     const handleReturn = ()=>{
         if(history.length <= 2){
             history.push('/');
@@ -23,7 +23,7 @@ export const HeroScreen = ({history}) => {
             <div className="col-4">
                 <img src={`../assets/heroes/${hero.id}.jpg`}
                      alt={hero.id} 
-                     className="img-thumbnail"/>
+                     className="img-thumbnail animate__animated animate__fadeInLeft"/>
             </div>
             <div className="col-8">
                 <h3>{hero.superhero}</h3>
