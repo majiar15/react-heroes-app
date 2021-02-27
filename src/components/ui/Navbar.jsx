@@ -7,7 +7,7 @@ export const Navbar = () => {
             
             <Link 
                 className="navbar-brand" 
-                to="/"
+                to="/react-heroes-app"
             >
                 Asociaciones
             </Link>
@@ -19,7 +19,7 @@ export const Navbar = () => {
                         activeClassName="active"
                         className="nav-item nav-link" 
                         exact
-                        to="/marvel"
+                        to="/react-heroes-app/marvel"
                     >
                         Marvel
                     </NavLink>
@@ -28,7 +28,7 @@ export const Navbar = () => {
                         activeClassName="active"
                         className="nav-item nav-link" 
                         exact
-                        to="/dc"
+                        to="/react-heroes-app/dc"
                     >
                         DC
                     </NavLink>
@@ -36,7 +36,7 @@ export const Navbar = () => {
                         activeClassName="active"
                         className="nav-item nav-link" 
                         exact
-                        to="/search"
+                        to="/react-heroes-app/search"
                     >
                         Search
                     </NavLink>
@@ -49,7 +49,7 @@ export const Navbar = () => {
                         activeClassName="active"
                         className="nav-item nav-link" 
                         exact
-                        to="/login"
+                        to="/react-heroes-app/login"
                     >
                         Logout
                     </NavLink>
