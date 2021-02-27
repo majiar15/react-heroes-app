@@ -9,11 +9,12 @@ export const HeroCard = ({
     first_appearance,
     characters
 }) => {
+    const urlImages = 'https://majiar15.github.io/react-heroes-app/assets/heroes';
     return (
         <div className="card ms-3" style={ {maxWidth: 540} }>
             <div className="row no-gutters">
                 <div className="col-md-4">
-                    <img src={`./assets/heroes/${id}.jpg`} alt={id}  className="card-img"/>
+                    <img src={`${urlImages}/${id}.jpg`} alt={id}  className="card-img"/>
                 </div>
                 <div className="col-md-8">
                     <div className="card-body">

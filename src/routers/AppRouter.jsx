@@ -8,7 +8,7 @@ export const AppRouter = () => {
   return (
     <Router>
         <Switch>
-          <Route exact path="/login" component={LoginScreen} />
+          <Route exact path="/react-heroes-app/login" component={LoginScreen} />
           <Route path="/" component={DashboardRoutes} />
         </Switch>
 
